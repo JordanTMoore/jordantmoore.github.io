@@ -1,12 +1,22 @@
-# main links
-main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+docs:
+  - title: Getting Started
+    children:
+      - title: "Product Info"
+        url: /info/
+      - title: "Requirements"
+        url: /requirements/
+      - title: "Installation"
+        url: /installation/
+      - title: "Upgrading"
+        url: /upgrading/
+
+
+  - title: Extensions
+    children:
+      - title: "Slack"
+        url: /slack/
+
+  - title: Support
+    children:
+      - title: "Troubleshooting"
+        url: /troubleshooting/
