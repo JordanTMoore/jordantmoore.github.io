@@ -25,7 +25,10 @@ When you have completed this code pattern, you will understand more about:
 * Deploying applications in Kubernetes
 * Provisioning a TRIRIGA Assistant
 * Capabilities of the TRIRIGA Assistant
+
+
 ![overview]({{ site.url }}{{ site.baseurl }}/assets/images/slack/SlackBotOverview.png)
+
 
 ## A. Requirements
 The following are required to use this software:
