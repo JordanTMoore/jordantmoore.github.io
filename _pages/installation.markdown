@@ -4,6 +4,8 @@
 
 permalink: /installation/
 layout: home
+title: Installing TRIRIGA Assistant
+description: Steps for requesting, provisioning and installing IBM TRIRIGA Assistant for your IBM TRIRIGA solution.
 
 sidebar:
   nav: "docs"
