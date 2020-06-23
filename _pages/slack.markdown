@@ -141,7 +141,7 @@ If having trouble getting Kubernetes to pull the image, see this [help document 
 ##### 9. Update both Request URLs in Slack using following template
     http://<Public-IP>:<NodePort>/slack
     http://<Public-IP>:<NodePort>/slack/handle_action
-    
+
 ## Example discussion with the slackbot
 [Here's an example]({{ site.url }}{{ site.baseurl }}/assets/images/slack/example.png) of the type of discussion you can have with the assistant through slack.
 
