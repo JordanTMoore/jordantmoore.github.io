@@ -142,7 +142,7 @@ If having trouble getting Kubernetes to pull the image, see this [help document 
     http://<Public-IP>:<NodePort>/slack
     http://<Public-IP>:<NodePort>/slack/handle_action
 ## Example discussion with the slackbot
-[Here's an example](images/example.png) of the type of discussion you can have with the assistant through slack.
+[Here's an example]({{ site.url }}{{ site.baseurl }}/assets/images/slack/example.png) of the type of discussion you can have with the assistant through slack.
 
 ## Built With
 * [IBMCloud](https://www.ibm.com/cloud) - Service provider and application hosting environment
