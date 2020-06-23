@@ -10,6 +10,7 @@ description: New and exciting changes for IBM TRIRIGA Assistant can be found her
 sidebar:
   nav: "docs"
 ---
+
 # Version 1.0.4
 
 In this update we explore the possibilities of analytics with IBM TRIRIGA
