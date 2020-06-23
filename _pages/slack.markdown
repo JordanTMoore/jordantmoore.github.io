@@ -25,7 +25,7 @@ When you have completed this code pattern, you will understand more about:
 * Deploying applications in Kubernetes
 * Provisioning a TRIRIGA Assistant
 * Capabilities of the TRIRIGA Assistant
-![overview](images/SlackBotOverview.png)
+![overview]({{ site.url }}{{ site.baseurl }}/assets/images/slack/SlackBotOverview.png)
 
 ## A. Requirements
 The following are required to use this software:
@@ -50,9 +50,9 @@ Edit the `.env` file and provide the following information:
 To complete the Slack Settings you need to create a slack app using Slack UI at `https://api.slack.com/apps`. You also may have to `Request to Install` the app before you change the settings below.  
 - `BOT_NAME` is the name you gave your bot in slack
 - `SLACK_WEBHOOK_SECRET` is the verification token slack sends with every request to your bot
-![Slack verification and bot name](images/SlackBasicInformation.png)
+![Slack verification and bot name]({{ site.url }}{{ site.baseurl }}/assets/images/slack/SlackBasicInformation.png)
 - `SLACK_BOT_USER_TOKEN` is the OAuth token for your bot to use to access slack
-![Bot Slack User Token](images/SlackOauthToken.png)
+![Bot Slack User Token]({{ site.url }}{{ site.baseurl }}/assets/images/slack/SlackOauthToken.png)
 - `OAuth & Permissions`
     - `Scopes` add the following `Bot Token Scopes`
         - 'app_mentions:read'
