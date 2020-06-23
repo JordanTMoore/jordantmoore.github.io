@@ -11,6 +11,8 @@ sidebar:
   nav: "docs"
 ---
 
+## [GET THE CODE!](https://github.com/IBM/tririga-assistant)
+
 ## Estimated time
 
 This installation should take 1-2 hours to complete, not including the time for IBM to provision the TRIRIGA Assistant skill.

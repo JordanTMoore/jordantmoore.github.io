@@ -13,7 +13,7 @@ sidebar:
 
 ## Prerequisites
 
-- TRIRIGA 10.6.1/3.6.0
+- TRIRIGA 10.6.1/3.6.0 or greater
 - TRIRIGA Workplace Services apps deployed
 - TRIRIGA Request Central and (optionally) TRIRIGA Reserve
 - TRIRIGA instance that is accessible securely from the internet.
