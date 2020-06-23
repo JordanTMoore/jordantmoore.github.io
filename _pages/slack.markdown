@@ -10,29 +10,34 @@ description: Steps for adding your own slack integration for your employees usin
 sidebar:
   nav: "docs"
 ---
+## [GET THE CODE!](https://github.com/IBM/tririga-assistant-slackbot)
 
-# TRIRIGA Assistant Slackbot
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 ![python](https://img.shields.io/badge/python-3.10-blue.svg)
 ![semver](https://img.shields.io/badge/semver-2.0.0-blue.svg?cacheSeconds=2592000)
 ![TRIRIGA](https://img.shields.io/badge/TRIRIGA-3.6/10.6-orange.svg?cacheSeconds=2592000)
-![TRIRIGA Assistant](https://img.shields.io/badge/TRIRIGA%20Assistant-1.0.4-orange.svg)
+![TRIRIGA Assistant](https://img.shields.io/badge/TRIRIGA%20Assistant-1.0.3-orange.svg)
 
 
-A python application for empowering users to achieve TRIRIGA functionality through the medium of a convenient and friendly Slack bot.
-Some examples of some features you can expect:
-* Booking Rooms
-* Opening Service Requests
-* Finding Locations or People
-* Answering Questions about your site
+In this code pattern, we will create a Slack app using Python, Docker, Kubernetes on IBM Cloud, and TRIRIGA Assistant.  The code provided will guide you in adding a Slack app to your Slack Workspace that will allow your TRIRIGA users to perform Workplace Service functionality through Slack utilizing the Watson Assistant add-on to TRIRIGA.
+When you have completed this code pattern, you will understand more about:
+* Defining a Slack app
+* Deploying applications in Kubernetes
+* Provisioning a TRIRIGA Assistant
+* Capabilities of the TRIRIGA Assistant
+![overview](images/SlackBotOverview.png)
+
 ## A. Requirements
 The following are required to use this software:
 1. An [IBM TRIRIGA](https://www.ibm.com/products/tririga) instance that is accessible via the internet
-2. Importing and performing setup steps for [TRIRIGA Assistant](https://github.com/Watson-Personal-Assistant/ibm-tririga-assistant) which includes provisioning of TRIRIGA Assistant Services by the IBM AI Applications - TRIRIGA Voice Enablement team.
+2. Importing and performing setup steps for [TRIRIGA Assistant](https://github.com/IBM/tririga-assistant) which includes provisioning of TRIRIGA Assistant Services by the IBM AI Applications - TRIRIGA Voice Enablement team.
 6. Access to a Slack workspace with privileges to create Slack applications.
 4. Docker for deploying in Kubernetes Service: [Windows](https://docs.docker.com/docker-for-windows/install/), [Mac](https://docs.docker.com/docker-for-mac/install/), [Getting Started](https://www.docker.com/get-started)
 5. [ngrok](https://ngrok.com/download) for local testing
+6. An IBM Cloud account
+
 ## B. Configuration
+
 ### Environment Variables
 Tririga-Bot has a handful of environment variables that need to be set.
 First, copy the `sample.env` file to `.env`.
@@ -40,13 +45,14 @@ Edit the `.env` file and provide the following information:
 #### App Configurations
 - `PORT` - the port the application will respond to.
 - `API_KEY` - a key needed to prevent unwanted access to this app.  This can be anything you wish.
+
 #### Slack Settings
-To complete the Slack Settings you need to create a slack app using Slack UI at `https://api.slack.com/apps`.
+To complete the Slack Settings you need to create a slack app using Slack UI at `https://api.slack.com/apps`. You also may have to `Request to Install` the app before you change the settings below.  
 - `BOT_NAME` is the name you gave your bot in slack
 - `SLACK_WEBHOOK_SECRET` is the verification token slack sends with every request to your bot
-![Slack verification and bot name](https://i.imgur.com/w3RkNsj.png)
+![Slack verification and bot name](images/SlackBasicInformation.png)
 - `SLACK_BOT_USER_TOKEN` is the OAuth token for your bot to use to access slack
-![Bot Slack User Token](https://i.imgur.com/zSHN9Sa.png)
+![Bot Slack User Token](images/SlackOauthToken.png)
 - `OAuth & Permissions`
     - `Scopes` add the following `Bot Token Scopes`
         - 'app_mentions:read'
@@ -70,6 +76,7 @@ To complete the Slack Settings you need to create a slack app using Slack UI at 
 
 #### TRIRIGA Assistant Settings
 - `TA_INTEGRATION_ID` - the Integration ID provided by the IBM AI Applications - TRIRIGA Voice Enablement Team.
+
 #### Watson Assistant Settings
 Optionally, you can connect this slackbot to a Watson Assistant created in your own Watson Assistant Service. The following information can be found on the Assistant's Settings page after creating the Assistant in your Watson Assistant Service.  Note, without a Skill provided by the IBM AI Applications - TRIRIGA Voice Enablement Team, connecting the Slackbot to Watson Assistant will not access data in TRIRIGA.
 - `WA_IAM_KEY` - The Service Credentials Api Key.
@@ -134,15 +141,15 @@ If having trouble getting Kubernetes to pull the image, see this [help document 
 ##### 9. Update both Request URLs in Slack using following template
     http://<Public-IP>:<NodePort>/slack
     http://<Public-IP>:<NodePort>/slack/handle_action
+## Example discussion with the slackbot
+[Here's an example](images/example.png) of the type of discussion you can have with the assistant through slack.
 
 ## Built With
 * [IBMCloud](https://www.ibm.com/cloud) - Service provider and application hosting environment
 * [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant) - NLU service for understanding user intent and other bot inputs.
 * [Slack Apps](https://api.slack.com/apps) - The API and framework for communicating to and from Slack
 * [IBM TRIRIGA](https://www.ibm.com/us-en/marketplace/ibm-tririga) - Facility management software solution by IBM
-## Contributing
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.ibm.com/ConsumerIoT/tririga-bot/tags).
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
